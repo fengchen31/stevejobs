@@ -786,10 +786,15 @@ We also remove the borders, since they don't need them. */
 	}
 
 	.intro_logo {
-		height: 50px;
-		position: absolute;
-		bottom: 80px;
-		left: 30px;
-		display: block;
+		height: 20px;
+
 	}
+
+	.intro_logo_container {
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		left: unset;
+	}
+
 }
