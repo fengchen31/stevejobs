@@ -69,11 +69,11 @@ const applyAnimation = (grid, animationType) => {
 				}, {
 					xPercent: () => gsap.utils.random(500, 1000)
 				}, 0)
-				.fromTo(gridItemsInner, {
-					scale: 2
-				}, {
-					scale: .5
-				}, 0)
+			// .fromTo(gridItemsInner, {
+			// 	scale: 2
+			// }, {
+			// 	scale: .5
+			// }, 0)
 
 
 			break;
@@ -90,7 +90,7 @@ const applyAnimation = (grid, animationType) => {
 
 			grid.style.setProperty('--grid-width', '100%');
 			grid.style.setProperty('--grid-gap', '6');
-			grid.style.setProperty('--grid-columns', '3');
+			grid.style.setProperty('--grid-columns', '5');
 			grid.style.setProperty('--grid-item-ratio', '1');
 
 			timeline
@@ -103,12 +103,12 @@ const applyAnimation = (grid, animationType) => {
 				.fromTo(gridItems, {
 					yPercent: () => gsap.utils.random(100, 1000),
 					rotationY: -45,
-					filter: 'brightness(120%)'
+					filter: 'brightness(130%)'
 				}, {
 					ease: 'power2',
 					yPercent: () => gsap.utils.random(-1000, -100),
 					rotationY: 45,
-					filter: 'brightness(70%)'
+					filter: 'brightness(80%)'
 				}, 0)
 				.fromTo(gridWrap, {
 					rotationZ: -5,
