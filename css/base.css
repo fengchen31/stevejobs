@@ -263,7 +263,7 @@ body #cdawrap {
 }
 
 .intro_logo_container {
-	position: absolute;
+	position: fixed;
 	bottom: 12px;
 	left: 12px;
 }
@@ -420,12 +420,18 @@ body #cdawrap {
 }
 
 .grid__item-inner {
-	position: relative;
-	width: calc(1 / var(--grid-inner-scale) * 100%);
-	height: calc(1 / var(--grid-inner-scale) * 100%);
-	background-size: cover;
-	background-position: 50% 50%;
+	/* position: relative; */
+	/* width: calc(1 / var(--grid-inner-scale) * 100%);
+	height: calc(1 / var(--grid-inner-scale) * 100%); */
+	/* background-position: 50% 50%; */
+	width: 300px;
+	height: 300px;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
 }
+
+
 
 @media screen and (min-width: 53em) {
 	.frame {
@@ -792,7 +798,7 @@ We also remove the borders, since they don't need them. */
 	}
 
 	.intro_logo_container {
-		position: absolute;
+		position: fixed;
 		top: 12px;
 		right: 12px;
 		left: unset;

@@ -52,7 +52,10 @@ const applyAnimation = (grid, animationType) => {
 
 			// Set some CSS related style values
 			grid.style.setProperty('--perspective', '1000px');
-			grid.style.setProperty('--grid-inner-scale', '0.5');
+			grid.style.setProperty('--grid-width', '100%');
+			grid.style.setProperty('--grid-gap', '6');
+			grid.style.setProperty('--grid-columns', '3');
+			grid.style.setProperty('--grid-item-ratio', '1');
 
 			timeline
 				.set(gridWrap, {
@@ -78,12 +81,17 @@ const applyAnimation = (grid, animationType) => {
 		case 'type2':
 
 			// Set some CSS related style values
-			grid.style.setProperty('--grid-width', '160%');
-			grid.style.setProperty('--perspective', '2000px');
-			grid.style.setProperty('--grid-inner-scale', '0.5');
-			grid.style.setProperty('--grid-item-ratio', '0.8');
-			grid.style.setProperty('--grid-columns', '6');
-			grid.style.setProperty('--grid-gap', '14vw');
+			// grid.style.setProperty('--grid-width', '160%');
+			grid.style.setProperty('--perspective', '5000px');
+			// grid.style.setProperty('--grid-inner-scale', '1');
+			// grid.style.setProperty('--grid-item-ratio', '0.8');
+			// grid.style.setProperty('--grid-columns', '6');
+			// grid.style.setProperty('--grid-gap', '14vw');
+
+			grid.style.setProperty('--grid-width', '100%');
+			grid.style.setProperty('--grid-gap', '6');
+			grid.style.setProperty('--grid-columns', '3');
+			grid.style.setProperty('--grid-item-ratio', '1');
 
 			timeline
 				.set(gridWrap, {
@@ -95,12 +103,12 @@ const applyAnimation = (grid, animationType) => {
 				.fromTo(gridItems, {
 					yPercent: () => gsap.utils.random(100, 1000),
 					rotationY: -45,
-					filter: 'brightness(200%)'
+					filter: 'brightness(120%)'
 				}, {
 					ease: 'power2',
 					yPercent: () => gsap.utils.random(-1000, -100),
 					rotationY: 45,
-					filter: 'brightness(0%)'
+					filter: 'brightness(70%)'
 				}, 0)
 				.fromTo(gridWrap, {
 					rotationZ: -5,
@@ -109,21 +117,26 @@ const applyAnimation = (grid, animationType) => {
 					rotationZ: 10,
 					scale: 1.2
 				}, 0)
-				.fromTo(gridItemsInner, {
-					scale: 2
-				}, {
-					scale: 0.5
-				}, 0)
+			// .fromTo(gridItemsInner, {
+			// 	scale: 2
+			// }, {
+			// 	scale: 0.5
+			// }, 0)
 
 			break;
 
 		case 'type3':
 
 			// Set some CSS related style values
-			grid.style.setProperty('--grid-width', '105%');
-			grid.style.setProperty('--grid-columns', '8');
+			// grid.style.setProperty('--grid-width', '105%');
+			// grid.style.setProperty('--grid-columns', '8');
 			grid.style.setProperty('--perspective', '1500px');
-			grid.style.setProperty('--grid-inner-scale', '0.5');
+			grid.style.setProperty('--grid-width', '100%');
+			grid.style.setProperty('--grid-gap', '6');
+			grid.style.setProperty('--grid-columns', '3');
+			grid.style.setProperty('--grid-item-ratio', '1');
+
+
 
 			timeline
 				.set(gridItems, {
@@ -141,11 +154,11 @@ const applyAnimation = (grid, animationType) => {
 				.to(gridWrap, {
 					z: 6500
 				}, 0)
-				.fromTo(gridItemsInner, {
-					scale: 2
-				}, {
-					scale: 0.5
-				}, 0);
+			// .fromTo(gridItemsInner, {
+			// 	scale: 2
+			// }, {
+			// 	scale: 0.5
+			// }, 0);
 
 			break;
 
@@ -155,7 +168,7 @@ const applyAnimation = (grid, animationType) => {
 			grid.style.setProperty('--grid-width', '50%');
 			grid.style.setProperty('--perspective', '3000px');
 			grid.style.setProperty('--grid-item-ratio', '0.8');
-			grid.style.setProperty('--grid-columns', '3');
+			grid.style.setProperty('--grid-columns', '2');
 			grid.style.setProperty('--grid-gap', '1vw');
 
 			timeline
@@ -230,7 +243,7 @@ const applyAnimation = (grid, animationType) => {
 		case 'type6':
 
 			// Set some CSS related style values
-			grid.style.setProperty('--perspective', '2500px');
+			grid.style.setProperty('--perspective', '1000px');
 			grid.style.setProperty('--grid-width', '100%');
 			grid.style.setProperty('--grid-gap', '6');
 			grid.style.setProperty('--grid-columns', '3');
@@ -244,7 +257,7 @@ const applyAnimation = (grid, animationType) => {
 				}, {
 					yPercent: 0,
 					rotationY: 360,
-					opacity: 0.2,
+					opacity: 0.8,
 					scale: 0.8,
 					stagger: 0.03,
 				})
