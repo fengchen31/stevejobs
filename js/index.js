@@ -208,7 +208,7 @@ const applyAnimation = (grid, animationType) => {
 
 			// Set some CSS related style values
 			grid.style.setProperty('--grid-width', '200%');
-			grid.style.setProperty('--grid-columns', '8');
+			grid.style.setProperty('--grid-columns', '5');
 			grid.style.setProperty('--grid-gap', '0');
 
 			const gridObj = getGrid(gridItems);
