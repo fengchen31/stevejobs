@@ -365,6 +365,7 @@ body #cdawrap {
 	font-size: clamp(1.5rem, 15vw, 6.5rem);
 	letter-spacing: -4px;
 	text-shadow: 2px 2px 4px rgba(205, 205, 205, 0.5);
+	pointer-events: none;
 }
 
 .content__title--top {
